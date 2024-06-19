@@ -3,7 +3,7 @@ package com.example.telemetry.factory;
 
 import com.example.telemetry.algorithms.Algorithm1;
 import com.example.telemetry.algorithms.Algorithm2;
-import com.example.telemetry.model.IAlgorithm;
+import com.example.common.model.IAlgorithm;
 
 public class AlgorithmFactory {
     public static IAlgorithm getAlgorithm(String algorithmName) {

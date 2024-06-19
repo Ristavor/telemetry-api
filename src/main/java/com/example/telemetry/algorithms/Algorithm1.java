@@ -1,8 +1,8 @@
 // Algorithm1.java
 package com.example.telemetry.algorithms;
 
-import com.example.telemetry.annotations.AlgorithmName;
-import com.example.telemetry.model.IAlgorithm;
+import com.example.common.annotations.AlgorithmName;
+import com.example.common.model.IAlgorithm;
 
 import java.util.Map;
 

@@ -3,9 +3,10 @@ package com.example.telemetry.controller;
 
 import com.example.telemetry.model.Algorithm;
 import com.example.telemetry.model.AlgorithmRequest;
-import com.example.telemetry.model.IAlgorithm;
 import com.example.telemetry.registry.AlgorithmRegistry;
 import org.springframework.web.bind.annotation.*;
+
+import com.example.common.model.IAlgorithm;
 
 import java.util.ArrayList;
 import java.util.HashMap;
