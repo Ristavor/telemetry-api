@@ -21,8 +21,6 @@ public class AlgorithmRegistry {
 
     static {
         try {
-            // Загрузка алгоритмов из основного classpath
-            registerAlgorithms("com.example.telemetry.algorithms");
 
             // Загрузка алгоритмов из JAR-файлов
             File algorithmsDir = new File("algorithms"); // Папка algorithms в корне проекта
