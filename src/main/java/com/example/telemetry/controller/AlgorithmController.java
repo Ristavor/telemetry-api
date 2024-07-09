@@ -1,10 +1,9 @@
 package com.example.telemetry.controller;
 
 import com.example.common.model.IAlgorithm;
+import com.example.telemetry.model.AlgorithmRequest;
 import com.example.telemetry.registry.AlgorithmRegistry;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,5 +23,17 @@ public class AlgorithmController {
             response.put(name, algorithm.getParameters());
         }
         return response;
+    }
+
+    @PostMapping
+    public String runAlgorithm(@RequestBody AlgorithmRequest request) {
+        try {
+            IAlgorithm algorithm = AlgorithmRegistry.getAlgorithm(request.getAlgorithmName());
+            algorithm.setParameters(request.getParameters());
+            algorithm.setInput(request.getInputData());
+            return algorithm.solve();
+        } catch (IllegalArgumentException e) {
+            return "Error: " + e.getMessage();
+        }
     }
 }

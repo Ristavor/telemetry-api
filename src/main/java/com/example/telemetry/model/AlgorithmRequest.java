@@ -1,4 +1,3 @@
-// AlgorithmRequest.java
 package com.example.telemetry.model;
 
 import java.util.Map;
@@ -8,26 +7,25 @@ public class AlgorithmRequest {
     private Map<String, String> parameters;
     private String inputData;
 
-    // Getters
+    // Getters and Setters
     public String getAlgorithmName() {
         return algorithmName;
+    }
+
+    public void setAlgorithmName(String algorithmName) {
+        this.algorithmName = algorithmName;
     }
 
     public Map<String, String> getParameters() {
         return parameters;
     }
 
-    public String getInputData() {
-        return inputData;
-    }
-
-    // Setters
-    public void setAlgorithmName(String algorithmName) {
-        this.algorithmName = algorithmName;
-    }
-
     public void setParameters(Map<String, String> parameters) {
         this.parameters = parameters;
+    }
+
+    public String getInputData() {
+        return inputData;
     }
 
     public void setInputData(String inputData) {
